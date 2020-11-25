@@ -5,16 +5,9 @@ import os
 import sys
 import json
 import subprocess
+import ROOT
 from autodqm import cfg
 from autodqm.histpair import HistPair
-
-# This is a segregated function, because importing ROOT above causes an issue with RTD/Sphinx that means the functions don't display online
-def ROOT():
-    """
-    ROOT imported from within this function, and is called in the code
-    """
-    import ROOT
-    return ROOT
 
 def process(config_dir, subsystem,
             data_series, data_sample, data_run, data_path,
@@ -27,9 +20,9 @@ def process(config_dir, subsystem,
 
     # Ensure no graphs are drawn to screen and no root messages are sent to
     # terminal
-    ROOT().gROOT.SetBatch(ROOT().kTRUE)
+    ROOT.gROOT.SetBatch(ROOT.kTRUE)
     # Report only errors to stderr
-    ROOT().gErrorIgnoreLevel = ROOT().kWarning + 1
+    ROOT.gErrorIgnoreLevel = ROOT.kWarning + 1
 
     histpairs = compile_histpairs(config_dir, subsystem,
                                   data_series, data_sample, data_run, data_path,
@@ -106,8 +99,8 @@ def compile_histpairs(config_dir, subsystem,
     main_gdir = config["main_gdir"]
 
     # ROOT files
-    data_file = ROOT().TFile.Open(data_path)
-    ref_file = ROOT().TFile.Open(ref_path)
+    data_file = ROOT.TFile.Open(data_path)
+    ref_file = ROOT.TFile.Open(ref_path)
 
     histPairs = []
 
