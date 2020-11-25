@@ -17,8 +17,6 @@ def process(config_dir, subsystem,
     """
     Processes histograms
 
-    This is a test to check whether this sentence becomes visible or not
-
     This is a further change, I'm using autodoc_mock_imports = ["root"]
     """
 
