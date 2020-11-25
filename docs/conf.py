@@ -82,7 +82,7 @@ apidoc_separate_modules = True
 apidoc_extra_args = ["-e"]
 
 # Packages with C-dependencies need a separate install
-autodoc_mock_imports = ["root"]
+autodoc_mock_imports = ["ROOT"]
 
 def setup(app):
     # Override default css

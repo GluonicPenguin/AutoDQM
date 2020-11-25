@@ -18,6 +18,8 @@ def process(config_dir, subsystem,
     Processes histograms
 
     This is a further change, I'm using autodoc_mock_imports = ["root"]
+
+    Will now try ROOT instead of root
     """
 
     # Ensure no graphs are drawn to screen and no root messages are sent to
