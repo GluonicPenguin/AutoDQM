@@ -16,6 +16,8 @@ def process(config_dir, subsystem,
 
     """
     Processes histograms
+
+    This is a test to check whether this sentence becomes visible or not
     """
 
     # Ensure no graphs are drawn to screen and no root messages are sent to
