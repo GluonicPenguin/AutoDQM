@@ -18,6 +18,8 @@ def process(config_dir, subsystem,
     Processes histograms
 
     This is a test to check whether this sentence becomes visible or not
+
+    This is a further change, I'm using autodoc_mock_imports = ["root"]
     """
 
     # Ensure no graphs are drawn to screen and no root messages are sent to
